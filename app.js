@@ -10,7 +10,7 @@ import { createRequire } from 'module';
 // import portfolio from './routes/portfolio.js';
 
 // const require = createRequire(import.meta.url);
-// const __dirname = fileURLToPath(new URL('.', import.meta.url));
+const __dirname = fileURLToPath(new URL('.', import.meta.url));
 // const config = require(`./config/config.${process.env.NODE_ENV}.json`);
 // const serverConfig = config.serverConfig;
 
