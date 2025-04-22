@@ -13,24 +13,23 @@ import { createRequire } from 'module';
 // const __dirname = fileURLToPath(new URL('.', import.meta.url));
 // const config = require(`./config/config.${process.env.NODE_ENV}.json`);
 // const serverConfig = config.serverConfig;
-var serverConfig;
 
 const app = express();
 
-if (serverConfig.maintenanceMode) {
-  app.get('/', function (req, res) {
-    res.sendFile('maintenance.html', { root: __dirname + "/public" });
-  });
-}
+// if (serverConfig.maintenanceMode) {
+//   app.get('/', function (req, res) {
+//     res.sendFile('maintenance.html', { root: __dirname + "/public" });
+//   });
+// }
 
-if (serverConfig.behindHttps) {
-  app.use(function (req, res, next) {
-    if ((!req.secure) && (req.get('X-Forwarded-Proto') !== 'https')) {
-      res.redirect('https://' + req.get('Host') + req.url);
-    } else
-      next();
-  });
-}
+// if (serverConfig.behindHttps) {
+//   app.use(function (req, res, next) {
+//     if ((!req.secure) && (req.get('X-Forwarded-Proto') !== 'https')) {
+//       res.redirect('https://' + req.get('Host') + req.url);
+//     } else
+//       next();
+//   });
+// }
 
 connectPromise();
 
