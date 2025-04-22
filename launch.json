@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "LaunchProgram",
+            "env": {
+                "NODE_ENV": "dev",
+                "INST": "cas"
+            },
+            "program": "${workspaceRoot}/www.js",
+            "cwd": "${workspaceFolder}",
+            "skipFiles": [
+                "${workspaceFolder}/node_modules/**"
+            ],
+            "resolveSourceMapLocations": [
+                "${workspaceFolder}/**",
+                "!**/node_modules/**"
+            ],
+            "outFiles": [
+                "${workspaceFolder}/routes/*.js",
+                "${workspaceFolder}/services/*.js",
+                "${workspaceFolder}/**/*.js",
+                "!**/node_modules/**"
+            ]
+        }
+    ]
+}
