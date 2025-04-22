@@ -1,0 +1,39 @@
+{
+    "serverConfig": {
+        "maintenanceMode": false,
+        "behindHttps": false,
+        "clusterEnabled": false,
+        "numNodesInCluster": 4,
+        "baseUrl": "http://localhost:8025"
+    },
+    "dbConfig": {
+        "url": "mongodb://localhost:27019/portFolio?directConnection=true",
+        "dbName": "portFolio",
+        "directConnection": true,
+        "migrationsDir": "migrations",
+        "backupsDir": "../backups",
+        "changelogCollectionName": "changelog",
+        "migrationFileExtension": ".js"
+    },
+    "logConfig": {
+        "httpRequestLog": {
+            "fname": "httpRequest.log",
+            "rfsOptions": {
+                "size": "10M",
+                "interval": "1d",
+                "compress": "gzip"
+            },
+            "format": ":remote-addr - :remote-user :date[clf] ':method :url HTTP/:http-version' :status :res[content-length] :response-time ':referrer' ':user-agent'"
+        },
+        "appLog": {
+            "streamConfig": {
+                "type": "rotating-file",
+                "fname": "app.log",
+                "period": "1d",
+                "count": 7,
+                "level": "debug"
+            }
+        }
+    },
+    "imgPath": "img/"
+}
