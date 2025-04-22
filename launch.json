@@ -7,7 +7,6 @@
             "name": "LaunchProgram",
             "env": {
                 "NODE_ENV": "dev",
-                "INST": "cas"
             },
             "program": "${workspaceRoot}/www.js",
             "cwd": "${workspaceFolder}",
