@@ -7,7 +7,7 @@ import { createRequire } from 'module';
 import { connectPromise } from "./daos/MongodDbUtil.js";
 
 
-import portfolio from './routes/portfolio.js';
+// import portfolio from './routes/portfolio.js';
 
 const require = createRequire(import.meta.url);
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
