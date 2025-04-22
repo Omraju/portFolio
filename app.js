@@ -46,7 +46,7 @@ app.use(urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(expressStatic(join(__dirname, 'public')));
 
-app.use('/portfolio', portfolio);
+// app.use('/portfolio', portfolio);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
