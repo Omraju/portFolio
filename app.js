@@ -2,7 +2,7 @@ import express, { json, urlencoded, static as expressStatic } from 'express';
 import { join } from 'path';
 import { fileURLToPath } from 'url';
 import cookieParser from 'cookie-parser';
-import httpRequestLogger from './logging/httpRequestLogger.js';
+// import httpRequestLogger from './logging/httpRequestLogger.js';
 import { createRequire } from 'module';
 import { connectPromise } from "./daos/MongodDbUtil.js";
 
@@ -39,7 +39,7 @@ app.set('view engine', 'hbs');
 // const compression = require('compression'); //comment these 2 lines in case you use nginx or other reverse proxy
 // app.use(compression());
 
-app.use(httpRequestLogger);
+// app.use(httpRequestLogger);
 app.use(json());
 app.use(urlencoded({ extended: false }));
 app.use(cookieParser());
