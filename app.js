@@ -13,6 +13,8 @@ import { createRequire } from 'module';
 // const __dirname = fileURLToPath(new URL('.', import.meta.url));
 // const config = require(`./config/config.${process.env.NODE_ENV}.json`);
 // const serverConfig = config.serverConfig;
+var serverConfig;
+
 const app = express();
 
 if (serverConfig.maintenanceMode) {
