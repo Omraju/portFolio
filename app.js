@@ -31,7 +31,7 @@ const app = express();
 //   });
 // }
 
-connectPromise();
+// connectPromise();
 
 // view engine setup
 app.set('views', join(__dirname, 'views'));
